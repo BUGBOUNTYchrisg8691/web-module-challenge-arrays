@@ -297,8 +297,8 @@ function getRandomInt(min, max) {
 
 function getRandomFlavors(...arrays) {
     let newArray = [];
-    while (newArray.length < 31) {
-        arrays.forEach(arr => newArray.push(arr[getRandomInt(0,arr.length)]));
+    while (newArray.length < 32) {
+        arrays.forEach(arr => newArray.push(arr[getRandomInt(0, arr.length)]));
     };
     newArray.pop();
     return newArray;

@@ -293,7 +293,7 @@ function getRandomInt(min, max) {
     min = Number(min);
     max = Number(max);
     return Math.floor(Math.random() * (max - min)) + min;
-}
+};
 
 function getRandomFlavors(...arrays) {
     let newArray = [];
@@ -302,6 +302,14 @@ function getRandomFlavors(...arrays) {
     };
     newArray.pop();
     return newArray;
+};
+
+function getRandomFlavors(array1, array2, array3, array4) {
+    let arrays = [array1, array2, array3, array4];
+    let newArray = [];
+    while (newArray.lenght < 32) {
+        let arr = getRandomInt(0, 3)
+    }
 }
 
 console.log(getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors));

@@ -289,8 +289,20 @@ var regionalFlavors = ["Pink Bubblegum",
     "Caramel 'n' Cookies"
 ]
 
-function getRandomFlavors( /*code here*/ ) {
-
-    /*code here*/
-
+function getRandomInt(min, max) {
+    min = Number(min);
+    max = Number(max);
+    return Math.floor(Math.random() * (max - min)) + min;
 }
+
+function getRandomFlavors(...arrays) {
+    let newArray = [];
+    while (newArray.length < 31) {
+        arrays.forEach(arr => newArray.push(arr[getRandomInt(0,arr.length)]));
+    };
+    newArray.pop();
+    return newArray;
+}
+
+console.log(getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors));
+console.log(getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors).length);

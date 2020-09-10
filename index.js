@@ -51,8 +51,8 @@ function is31Flavors(inArray) {
     }
 }
 
-// console.log(is31Flavors(originalFlavors));
-// console.log('-----------------------------end-of-1-----------------------------------');
+console.log(is31Flavors(originalFlavors));
+console.log('-----------------------------end-of-1-----------------------------------');
 
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
@@ -73,6 +73,7 @@ function addFlavor(newFlavor, inArray) {
 
 const addArr = addFlavor("Rainbow Sherbert", originalFlavors);
 console.log(addArr);
+// console.log(addFlavor("Rainbow Sherbert", originalFlavors));
 console.log('-----------------------------end-of-2-----------------------------------');
 
 /* Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array. 
@@ -93,8 +94,9 @@ function removeLastFlavor(inArray) {
 
 }
 
-const remArr = removeLastFlavor(originalFlavors);
+const remArr = removeLastFlavor(addArr);
 console.log(remArr);
+// console.log(removeLastFlavor(originalFlavors));
 console.log('-----------------------------end-of-3-----------------------------------');
 
 /* Task 4: Write a function that returns a flavor at a given index in the array.
@@ -112,12 +114,12 @@ function getFlavorByIndex(inArray, index) {
 
 }
 
-// console.log(getFlavorByIndex(originalFlavors, 2));
+console.log(getFlavorByIndex(originalFlavors, 2));
 // console.log(getFlavorByIndex(originalFlavors, 25));
 // console.log(getFlavorByIndex(originalFlavors, 9));
 // console.log(getFlavorByIndex(originalFlavors, 34))
 
-// console.log('-----------------------------end-of-4-----------------------------------');
+console.log('-----------------------------end-of-4-----------------------------------');
 
 /* Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that flavor from the array. 
 
@@ -143,8 +145,9 @@ function removeFlavorByName(inArray, flavor) {
     return inArray
 }
 
-const nameArr = removeFlavorByName(originalFlavors, 'Vanilla');
+const nameArr = removeFlavorByName(remArr, 'Vanilla');
 console.log(nameArr);
+// console.log(removeFlavorByName(originalFlavors, "Vanilla"));
 console.log('-----------------------------end-of-5-----------------------------------');
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 

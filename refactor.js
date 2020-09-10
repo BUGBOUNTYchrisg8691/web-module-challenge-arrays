@@ -68,11 +68,10 @@ For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainb
 function addFlavor(newFlavor, inArray) {
     inArray.unshift(newFlavor);
     console.log(inArray);
-    return inArray;
 }
 
-const addArr = addFlavor("Rainbow Sherbert", originalFlavors);
-console.log(addArr);
+addFlavor("Rainbow Sherbert", originalFlavors);
+// console.log(originalFlavors);
 console.log('-----------------------------end-of-2-----------------------------------');
 
 /* Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array. 
@@ -89,13 +88,12 @@ function removeLastFlavor(inArray) {
 
     inArray.pop();
     console.log(inArray);
-    return inArray;
 
 }
 
-const remArr = removeLastFlavor(originalFlavors);
-console.log(remArr);
-console.log('-----------------------------end-of-3-----------------------------------');
+// removeLastFlavor(originalFlavors);
+// console.log(originalFlavors);
+// console.log('-----------------------------end-of-3-----------------------------------');
 
 /* Task 4: Write a function that returns a flavor at a given index in the array.
 
@@ -143,9 +141,8 @@ function removeFlavorByName(inArray, flavor) {
     return inArray
 }
 
-const nameArr = removeFlavorByName(originalFlavors, 'Vanilla');
-console.log(nameArr);
-console.log('-----------------------------end-of-5-----------------------------------');
+// console.log(removeFlavorByName(originalFlavors, 'Vanilla'));
+// console.log('-----------------------------end-of-5-----------------------------------');
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
 
@@ -161,12 +158,12 @@ function copy(inArray, outArray) {
         outArray.push(inArray[i]);
     }
 }
-var copyArray = [];
-copy(originalFlavors, copyArray);
-console.log(originalFlavors);
-console.log('--------------------')
-console.log(copyArray);
-console.log('-----------------------------end-of-6-----------------------------------');
+// var copyArray = [];
+// copy(originalFlavors, copyArray);
+// console.log(originalFlavors);
+// console.log('--------------------')
+// console.log(copyArray);
+// console.log('-----------------------------end-of-6-----------------------------------');
 
 /* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array called filteredArray with just these values. Rather than hardcoding "chocolate" into your function, pass a string as a parameter, and invoke with the argument "chocolate". This way you could also filter for "Vanilla", "Sherbert", etc. when those holidays roll around.
 
@@ -193,9 +190,8 @@ function filterByWord(inArray, keyword) {
     return newArray;
 }
 
-const filtArr = filterByWord(originalFlavors, 'chocolate');
-console.log(filtArr);
-console.log('-----------------------------end-of-7-----------------------------------');
+// console.log(filterByWord(originalFlavors, 'chocolate'));
+// console.log('-----------------------------end-of-7-----------------------------------');
 
 
 
@@ -219,8 +215,8 @@ function getAverageWordLength(inArray) {
     return count / inArray.length
 }
 
-console.log(getAverageWordLength(originalFlavors));
-console.log('-----------------------------end-of-s1-----------------------------------');
+// console.log(getAverageWordLength(originalFlavors));
+// console.log('-----------------------------end-of-s1-----------------------------------');
 
 /* STRETCH 2: Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors.
 
@@ -321,7 +317,14 @@ function getRandomFlavors(...arrays) {
     return newArray;
 };
 
+// function getRandomFlavors(array1, array2, array3, array4) {
+//     let arrays = [array1, array2, array3, array4];
+//     let newArray = [];
+//     while (newArray.lenght < 32) {
+//         let arr = getRandomInt(0, 3)
+//     }
+// }
 
-console.log(getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors));
+// console.log(getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors));
 // console.log(getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors).length);
-console.log('-----------------------------end-of-s1-----------------------------------');
+// console.log('-----------------------------end-of-s1-----------------------------------');

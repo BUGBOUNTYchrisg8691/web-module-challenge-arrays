@@ -31,6 +31,7 @@ var originalFlavors = ["Banana Nut Fudge",
     "Vanilla Burnt Almond"
 ]
 
+// console.log(originalFlavors);
 /* Task 1: Confirm that the array is exactly 31 flavors. Your function should accept:
 
 (1) an array 
@@ -43,14 +44,15 @@ i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
 function is31Flavors(inArray) {
 
-    if (inArray.length = 31) {
+    if (inArray.length === 31) {
         return true
     } else {
         return false
     }
 }
 
-console.log(is31Flavors(originalFlavors));
+// console.log(is31Flavors(originalFlavors));
+// console.log('-----------------------------end-of-1-----------------------------------');
 
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
@@ -64,13 +66,13 @@ Your function should add the flavor to the front of the array and console.log th
 For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"] */
 
 function addFlavor(newFlavor, inArray) {
-
     inArray.unshift(newFlavor);
     console.log(inArray);
-
 }
 
 addFlavor("Rainbow Sherbert", originalFlavors);
+// console.log(originalFlavors);
+console.log('-----------------------------end-of-2-----------------------------------');
 
 /* Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array. 
 
@@ -90,6 +92,8 @@ function removeLastFlavor(inArray) {
 }
 
 removeLastFlavor(originalFlavors);
+// console.log(originalFlavors);
+// console.log('-----------------------------end-of-3-----------------------------------');
 
 /* Task 4: Write a function that returns a flavor at a given index in the array.
 
@@ -106,7 +110,12 @@ function getFlavorByIndex(inArray, index) {
 
 }
 
-console.log(getFlavorByIndex(originalFlavors, 3));
+// console.log(getFlavorByIndex(originalFlavors, 2));
+// console.log(getFlavorByIndex(originalFlavors, 25));
+// console.log(getFlavorByIndex(originalFlavors, 9));
+// console.log(getFlavorByIndex(originalFlavors, 34))
+
+// console.log('-----------------------------end-of-4-----------------------------------');
 
 /* Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that flavor from the array. 
 
@@ -132,7 +141,8 @@ function removeFlavorByName(inArray, flavor) {
     return inArray
 }
 
-console.log(removeLastFlavor(originalFlavors, 'Vanilla'));
+console.log(removeFlavorByName(originalFlavors, 'Vanilla'));
+// console.log('-----------------------------end-of-5-----------------------------------');
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
 
@@ -148,11 +158,12 @@ function copy(inArray, outArray) {
         outArray.push(inArray[i]);
     }
 }
-var copyArray = [];
-copy(originalFlavors, copyArray);
-console.log(originalFlavors);
-console.log('--------------------')
-console.log(copyArray);
+// var copyArray = [];
+// copy(originalFlavors, copyArray);
+// console.log(originalFlavors);
+// console.log('--------------------')
+// console.log(copyArray);
+// console.log('-----------------------------end-of-6-----------------------------------');
 
 /* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array called filteredArray with just these values. Rather than hardcoding "chocolate" into your function, pass a string as a parameter, and invoke with the argument "chocolate". This way you could also filter for "Vanilla", "Sherbert", etc. when those holidays roll around.
 
@@ -179,7 +190,8 @@ function filterByWord(inArray, keyword) {
     return newArray;
 }
 
-console.log(filterByWord(originalFlavors, 'chocolate'));
+// console.log(filterByWord(originalFlavors, 'chocolate'));
+// console.log('-----------------------------end-of-7-----------------------------------');
 
 
 
@@ -203,7 +215,8 @@ function getAverageWordLength(inArray) {
     return count / inArray.length
 }
 
-console.log(getAverageWordLength(originalFlavors));
+// console.log(getAverageWordLength(originalFlavors));
+// console.log('-----------------------------end-of-s1-----------------------------------');
 
 /* STRETCH 2: Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors.
 
@@ -304,13 +317,14 @@ function getRandomFlavors(...arrays) {
     return newArray;
 };
 
-function getRandomFlavors(array1, array2, array3, array4) {
-    let arrays = [array1, array2, array3, array4];
-    let newArray = [];
-    while (newArray.lenght < 32) {
-        let arr = getRandomInt(0, 3)
-    }
-}
+// function getRandomFlavors(array1, array2, array3, array4) {
+//     let arrays = [array1, array2, array3, array4];
+//     let newArray = [];
+//     while (newArray.lenght < 32) {
+//         let arr = getRandomInt(0, 3)
+//     }
+// }
 
-console.log(getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors));
-console.log(getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors).length);
+// console.log(getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors));
+// console.log(getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors).length);
+// console.log('-----------------------------end-of-s1-----------------------------------');

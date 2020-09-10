@@ -52,6 +52,9 @@ function is31Flavors(inArray) {
 }
 
 console.log(is31Flavors(originalFlavors));
+
+const emptyArr = [];
+console.log(is31Flavors(emptyArr));
 console.log('-----------------------------end-of-1-----------------------------------');
 
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -68,11 +71,11 @@ For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainb
 function addFlavor(newFlavor, inArray) {
     inArray.unshift(newFlavor);
     console.log(inArray);
-    return inArray;
 }
 
-const addArr = addFlavor("Rainbow Sherbert", originalFlavors);
-console.log(addArr);
+console.log(originalFlavors);
+addFlavor("Rainbow Sherbert", originalFlavors);
+// console.log(addArr);
 // console.log(addFlavor("Rainbow Sherbert", originalFlavors));
 console.log('-----------------------------end-of-2-----------------------------------');
 
@@ -90,12 +93,12 @@ function removeLastFlavor(inArray) {
 
     inArray.pop();
     console.log(inArray);
-    return inArray;
 
 }
 
-const remArr = removeLastFlavor(addArr);
-console.log(remArr);
+console.log(originalFlavors);
+removeLastFlavor(originalFlavors);
+// console.log(remArr);
 // console.log(removeLastFlavor(originalFlavors));
 console.log('-----------------------------end-of-3-----------------------------------');
 
@@ -145,9 +148,10 @@ function removeFlavorByName(inArray, flavor) {
     return inArray
 }
 
-const nameArr = removeFlavorByName(remArr, 'Vanilla');
-console.log(nameArr);
-// console.log(removeFlavorByName(originalFlavors, "Vanilla"));
+// const nameArr = removeFlavorByName(remArr, 'Vanilla');
+// console.log(nameArr);
+console.log(originalFlavors);
+console.log(removeFlavorByName(originalFlavors, "Vanilla"));
 console.log('-----------------------------end-of-5-----------------------------------');
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
@@ -327,4 +331,4 @@ function getRandomFlavors(...arrays) {
 
 console.log(getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors));
 // console.log(getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors).length);
-console.log('-----------------------------end-of-s1-----------------------------------');
+console.log('-----------------------------end-of-s2-----------------------------------');
